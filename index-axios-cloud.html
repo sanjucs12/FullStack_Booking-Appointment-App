@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book an Appointment</title>
+</head>
+<body>
+    <header>
+        <h1>Book an Appointment</h1>
+    </header>
+    <form id="form" onsubmit="savetocloud(event)">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name">
+    <label for="mail">Email</label>
+    <input type="email" id="mail" name="mail">
+    <label for="number">Phone number</label>
+    <input type="tel" id="number" name="number">
+    <input type="submit" id="submit">
+    </form>    
+    <script src="index-axios-cloud.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</body>
+</html>
