@@ -1,3 +1,5 @@
+//let parent = document.getElementById('form')
+
 //for seperating savetolocal function and display function
 
 function savetolocal(event){
@@ -15,10 +17,10 @@ function savetolocal(event){
     
     //Saving to local storage
     localStorage.setItem(name,JSON.stringify(details))
-    display();    
+    display(details);    
     }
 
-    function display(){
+    function display(details){
 
     let name=document.getElementById('name').value;
     let mail=document.getElementById('mail').value;
@@ -27,7 +29,8 @@ function savetolocal(event){
     //creating li element
     let parent = document.getElementById('form')
     let li=document.createElement('li')
-    li.appendChild(document.createTextNode(`${name}  ${mail}  ${number}`)); 
+    //li.textContent=details.name+details.mail+details.number;
+    li.appendChild(document.createTextNode(`${details.name}  ${details.mail}  ${details.number}`)); 
     
     //Adding delete button
     let deletebutton=document.createElement('button');
